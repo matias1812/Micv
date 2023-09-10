@@ -6,6 +6,7 @@ image: {
     src: "https://media.licdn.com/dms/image/C560BAQHaVYd13rRz3A/company-logo_200_200/0/1638831589865?e=1702512000&v=beta&t=u1LVAxhGUCYerdi4BqYixOS94OD0Es6o70bz2KsmIXU",
     alt: "full stack web development"
 }
+href: "https://github.com/matias1812/clon_twiter"
 publishDate: "2023-8-10"
 category: "Mi independencia"
 author: "Matias Torres"

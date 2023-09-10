@@ -1,6 +1,6 @@
 ---
 import { Picture } from "@astrojs/image/components";
-import heroImage from "assets/hero.png";
+import logoImage from "assets/logo.png";
 import Link from "@components/ui/link.astro";
 import { Icon } from "astro-icon";
 ---
@@ -9,11 +9,11 @@ import { Icon } from "astro-icon";
   class="grid lg:grid-cols-2 place-items-center pt-16 pb-8 md:pt-12 md:pb-24">
   <div class="py-6 md:order-1 hidden md:block">
     <Picture
-      src={heroImage}
+      src={logoImage}
       alt="Astronaut in the air"
-      widths={[200, 400, 600]}
+      widths={[100, 300, 400]}
       aspectRatio="4:3"
-      sizes="(max-width: 800px) 100vw, 620px"
+      sizes="(max-width: 800px) 100vw, 500px"
       loading="eager"
       format="avif"
     />
@@ -21,33 +21,42 @@ import { Icon } from "astro-icon";
   <div>
     <h1
       class="text-5xl lg:text-6xl xl:text-7xl font-bold lg:tracking-tight xl:tracking-tighter">
-      Marketing website done with Astro
+      Frontend Develeoper
     </h1>
     <p class="text-lg mt-4 text-slate-600 max-w-xl">
-      Astroship is a starter template for startups, marketing websites & landing
-      pages.<wbr /> Built with Astro.build and TailwindCSS. You can quickly create
-      any website with this starter.
+      Me desenvuelvo como diseñador web, maketador, experiencia de usuario, manejando diversas tecnologias y lenguajes en los cuales constantemente pongo en practica.
+    </p>
+    <p class="text-lg mt-4 text-slate-600 max-w-lg">
+      visita mi GitHub para ver mis proyectos 
     </p>
     <div class="mt-6 flex flex-col sm:flex-row gap-3">
       <Link
         href="#"
-        href="https://web3templates.com/templates/astroship-starter-website-template-for-astro"
+        href=""
         target="_blank"
         class="flex gap-1 items-center justify-center"
         rel="noopener">
         <Icon class="text-white w-5 h-5" name="bx:bxs-cloud-download" />
-
-        Download for Free
+        Descargar CV
       </Link>
+      <Link
+      size="lg"
+      rel="noopener"
+      href="https://www.linkedin.com/in/matias-torres-developer-freelance/"
+      class="flex gap-1 items-center justify-center"
+      target="_blank">
+      <Icon class="text-white w-4 h-4" name="bx:bxl-linkedin" />
+      Mi Linkendin
+    </Link>
       <Link
         size="lg"
         style="outline"
         rel="noopener"
-        href="https://github.com/surjithctly/astroship"
+        href="https://github.com/matias1812"
         class="flex gap-1 items-center justify-center"
         target="_blank">
         <Icon class="text-black w-4 h-4" name="bx:bxl-github" />
-        GitHub Repo
+        Mi GitHub
       </Link>
     </div>
   </div>

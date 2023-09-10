@@ -1,9 +1,9 @@
 ---
 import { SEO } from "astro-seo";
-import Footer from "@components/footer.astro";
 import Navbar from "@components/navbar/navbar.astro";
+import Footer from "@components/footer.astro";
 import "@fontsource-variable/inter/index.css";
-
+import { ViewTransitions } from "astro:transitions";
 export interface Props {
   title: string;
 }
@@ -18,8 +18,8 @@ const resolvedImageWithDomain = new URL(
 const { title } = Astro.props;
 
 const makeTitle = title
-  ? title + " | " + "Astroship"
-  : "Astroship - Starter Template for Astro with Tailwind CSS";
+  ? title + " | " + "Matias Torres"
+  : "Matias Torres - curriculum vitae";
 ---
 
 <!DOCTYPE html>
@@ -29,6 +29,7 @@ const makeTitle = title
     <meta name="viewport" content="width=device-width" />
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <meta name="generator" content={Astro.generator} />
+    <ViewTransitions/>
 
     <!-- <link rel="preload" as="image" href={src} alt="Hero" /> -->
     <SEO
@@ -44,7 +45,7 @@ const makeTitle = title
         basic: {
           url: canonicalURL,
           type: "website",
-          title: `Astroship - Starter Template for Astro`,
+          title: `Matias Torres - curriculum vitae`,
           image: resolvedImageWithDomain,
         },
         image: {
@@ -56,7 +57,7 @@ const makeTitle = title
   <body>
     <Navbar />
     <slot />
-    <Footer />
+    <Footer/>
     <style is:global>
       /* Improve Page speed */
       /* https://css-tricks.com/almanac/properties/c/content-visibility/ */

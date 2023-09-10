@@ -1,15 +1,15 @@
 ---
 draft: false
-title: "How to become a Frontend Master"
+title: "Ingreso No country"
 snippet: "Ornare cum cursus laoreet sagittis nunc fusce posuere per euismod dis vehicula a, semper fames lacus maecenas dictumst pulvinar neque enim non potenti. Torquent hac sociosqu eleifend potenti."
 image: {
-    src: "https://images.unsplash.com/photo-1667372393119-3d4c48d07fc9?&fit=crop&w=430&h=240",
+    src: "https://media.licdn.com/dms/image/C4D0BAQHJ8T4EUDhVTQ/company-logo_200_200/0/1657893487276?e=1702512000&v=beta&t=twvpJwAV7CzCDFC271G2rhHIC96N2RaLXCBW6LRV_b0",
     alt: "frontend master"
 }
-publishDate: "2022-11-07 15:39"
-category: "Tutorials"
-author: "Connor Lopez"
-tags: [astro, tailwindcss, frontend]
+publishDate: "2023-9-10"
+category: "Mi independencia"
+author: "Matias Torres"
+tags: [zustand, supabase, next ui, Typescript]
 ---
 
 Whatever you do, it's always beneficial to have the right tools at your disposal. I love working remotely and am a big advocate of doing remote software development. Therefore, I always strive to have the best equipment available to be as productive as possible. Writing posts like this constantly takes a lot of time. Luckily iVanky helped me out and sponsored this post so that I can concentrate on writing. I recently had the chance to test out one of their hottest products, a dual USB-C Docking Station that allows me to connect both my wide-screen monitors to my MacBook with Dual 4K@60Hz display connectivity. It also supports up to 96W laptop charging, which is awesome. If you are in a situation like me and want to upgrade your equipment, check out this and their other products! And now comes the article:

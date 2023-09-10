@@ -20,13 +20,24 @@ const { Content } = await entry.render();
 <Layout title={entry.data.title}>
   <Container>
     <div class="mx-auto max-w-3xl mt-14">
+      <div class="flex flex-row justify-between mt-8">
       <span class="text-blue-400 uppercase tracking-wider text-sm font-medium">
         {entry.data.category}
       </span>
-      <h1
-        class="text-4xl lg:text-5xl font-bold lg:tracking-tight mt-1 lg:leading-tight">
-        {entry.data.title}
-      </h1>
+        <a
+          href="/blog"
+          class="bg-gray-100 px-5 py-3 rounded-md hover:bg-gray-200 transition"
+          >← Back to Blog</a
+        >
+      </div>
+  
+      <div class="flex flex-row ">
+        <img src={entry.data.image.src} alt="" class="w-[4.5rem] flex ">
+        <h1
+          class="text-4xl lg:text-5xl font-bold lg:tracking-tight mt-1 lg:leading-tight">
+          {entry.data.title}
+        </h1>
+      </div>
       <div class="flex gap-2 mt-3 items-center flex-wrap md:flex-nowrap">
         <span class="text-gray-400">
           {entry.data.author}
@@ -47,16 +58,10 @@ const { Content } = await entry.render();
         </div>
       </div>
     </div>
-
+    <div class="flex justify-center items-center">
+    </div>
     <div class="mx-auto prose prose-lg mt-6 max-w-3xl">
       <Content />
-    </div>
-    <div class="text-center mt-8">
-      <a
-        href="/blog"
-        class="bg-gray-100 px-5 py-3 rounded-md hover:bg-gray-200 transition"
-        >← Back to Blog</a
-      >
     </div>
   </Container>
 </Layout>

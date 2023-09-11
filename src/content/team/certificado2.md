@@ -1,5 +1,6 @@
 ---
 draft: false
+id: "2"
 name: "Typescript esencial"
 title: "Linkedin Laerning"
 avatar: {

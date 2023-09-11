@@ -1,5 +1,6 @@
 ---
 draft: false
+id: "3"
 name: "React avanzado 1"
 title: "Linkedin Laerning"
 avatar: {

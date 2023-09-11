@@ -1,13 +1,12 @@
 ---
 draft: false
 title: "Ingreso No country"
-snippet: "Ornare cum cursus laoreet sagittis nunc fusce posuere per euismod dis vehicula a, semper fames lacus maecenas dictumst pulvinar neque enim non potenti. Torquent hac sociosqu eleifend potenti."
 image: {
     src: "https://media.licdn.com/dms/image/C4D0BAQHJ8T4EUDhVTQ/company-logo_200_200/0/1657893487276?e=1702512000&v=beta&t=twvpJwAV7CzCDFC271G2rhHIC96N2RaLXCBW6LRV_b0",
     alt: "frontend master"
 }
 href: ""
-publishDate: "2023-9-10"
+publishDate: "2023-9-11"
 category: "Mi independencia"
 author: "Matias Torres"
 tags: [zustand, supabase, next ui, Typescript]

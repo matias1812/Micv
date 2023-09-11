@@ -1,7 +1,6 @@
 ---
 draft: false
 title: "Desafio latam y mis inicios"
-snippet: "Ornare cum cursus laoreet sagittis nunc fusce posuere per euismod dis vehicula a, semper fames lacus maecenas dictumst pulvinar neque enim non potenti. Torquent hac sociosqu eleifend potenti."
 href: "https://github.com/matias1812/frontend_sename/"
 image: {
     src: "https://media.licdn.com/dms/image/D4D0BAQFPR6ZUmQw4AA/company-logo_200_200/0/1681130420838?e=1702512000&v=beta&t=mRz0VBXId8uKq4P2y80zz16jBaavmpAMWHM0zKtGDKU",

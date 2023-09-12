@@ -8,12 +8,7 @@ export interface Props {
   title: string;
 }
 
-const canonicalURL = new URL(Astro.url.pathname, Astro.site).toString();
 
-const resolvedImageWithDomain = new URL(
-  "/opengraph.jpg",
-  Astro.site
-).toString();
 
 const { title } = Astro.props;
 
@@ -31,25 +26,23 @@ const makeTitle = title
     <meta name="generator" content={Astro.generator} />
     <ViewTransitions fallback="swap"/>
 
-    <!-- <link rel="preload" as="image" href={src} alt="Hero" /> -->
     <SEO
       title={makeTitle}
-      description="Astroship is a starter website template for Astro built with TailwindCSS."
-      canonical={canonicalURL}
+      description="Mi portafolio y blog personal."
       twitter={{
-        creator: "@surjithctly",
-        site: "@web3templates",
+        creator: "@Matias_torres",
+        site: "",
         card: "summary_large_image",
       }}
       openGraph={{
         basic: {
-          url: canonicalURL,
+ 
           type: "website",
           title: `Matias Torres - curriculum vitae`,
-          image: resolvedImageWithDomain,
+          image: "",
         },
         image: {
-          alt: "Astroship Homepage Screenshot",
+          alt: ".",
         },
       }}
     />
@@ -59,8 +52,6 @@ const makeTitle = title
     <slot />
     <Footer/>
     <style is:global>
-      /* Improve Page speed */
-      /* https://css-tricks.com/almanac/properties/c/content-visibility/ */
       img {
         content-visibility: auto;
       }

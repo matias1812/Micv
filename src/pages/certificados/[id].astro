@@ -2,32 +2,49 @@
 import Layout from "@layouts/Layout.astro";
 import { Picture } from "@astrojs/image/components";
 import { getCollection } from "astro:content";
+import Container from "@components/container.astro";
 
-const { id } = Astro.params
+const { id } = Astro.params;
 
- let certificado
- if(id) {
-  certificado = (await getCollection("team")).find(certificado => (certificado.data.id == id))  
- }
+let certificado;
+if (id) {
+  certificado = (await getCollection("team")).find(
+    (certificado) => certificado.data.id == id
+  );
+}
 
 export async function getStaticPaths() {
-  const certificados = await getCollection("team")
+  const certificados = await getCollection("team");
   return certificados.map((certificado) => ({
-    params: {id: certificado.data.id}
-  }))
+    params: { id: certificado.data.id },
+  }));
 }
 ---
 
 <Layout title={`certificado ${id}`}>
-  <div class="gap-10 mx-auto max-w-3xl mt-12">
-  <Picture
-  src={certificado.data.avatar.src}
-  alt={certificado.data.avatar.alt}
-  position="center"
-  sizes="(max-width-auto}"
-  widths={[5000]}
-  aspectRatio="800:600"
-  class="w-full rounded-md "
-  />
-  <div>
+  <Container>
+    <div class="flex flex-row justify-between mt-[3rem]">
+      <span class="text-blue-400 uppercase tracking-wider text-md font-bold">
+        {certificado.data.title}
+      </span>
+        <a
+          href="/certificados"
+          class="bg-gray-100 px-5 py-3 rounded-md hover:bg-gray-200 transition"
+          >← Back</a
+        >
+      </div>
+    <div class="gap-10 mx-auto max-w-3xl mt-12">
+      <Picture
+        src={certificado.data.avatar.src}
+        alt={certificado.data.avatar.alt}
+        position="center"
+        sizes="(max-width-auto}"
+        widths={[5000]}
+        aspectRatio="800:600"
+        class="w-full rounded-md"
+        transition:animate="slide"
+      />
+      <Container />
+    </div>
+  </Container>
 </Layout>

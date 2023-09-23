@@ -1,12 +1,11 @@
 ---
 draft: false
 id: "6"
-name: "TypeScript Avanzado"
+name: "Typescript esencial"
 title: "Linkedin Laerning"
 avatar: {
-    src: "https://media.licdn.com/dms/image/D4E22AQFI4N1MZr7o9A/feedshare-shrink_1280/0/1694554042247?e=1697673600&v=beta&t=zwWZ51guC2a08FZC3lkhI1K-3uH1kQ9k-O98mgYxaOY",
-    alt: "matias"
+    src: "https://media.licdn.com/dms/image/D4E22AQHt8fOZjgyvQQ/feedshare-shrink_1280/0/1692923798070?e=1697068800&v=beta&t=OzHy4YrQYBQcczHSgOb8VZqM7anDnEJF03aQKmkEnFE",
+    alt: "Robert Palmer"
 }
-publishDate: "2022-11-07 15:39"
+publishDate: "2022-11-09 15:39"
 ---
-

@@ -6,7 +6,7 @@ image: {
     alt: "frontend master"
 }
 href: "https://github.com/No-Country/c13-44-front-js-supabase"
-publishDate: "2023-9-11"
+publishDate: "2023-15-11"
 category: "Mi independencia"
 author: "Matias Torres"
 tags: [Zustand, Supabase, Next ui, Typescript, Valibot, Wouter, Figma]

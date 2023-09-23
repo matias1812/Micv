@@ -1,11 +1,11 @@
 ---
 draft: false
 id: "2"
-name: "Typescript esencial"
-title: "Linkedin Laerning"
+name: "Full Stack"
+title: "Desafio latam"
 avatar: {
-    src: "https://media.licdn.com/dms/image/D4E22AQHt8fOZjgyvQQ/feedshare-shrink_1280/0/1692923798070?e=1697068800&v=beta&t=OzHy4YrQYBQcczHSgOb8VZqM7anDnEJF03aQKmkEnFE",
-    alt: "Robert Palmer"
+    src: "https://desafiosdev.s3.amazonaws.com/uploads/certification/image/24674/aprobacion-proyectos-sename-13438.png",
+    alt: "matias"
 }
-publishDate: "2022-11-09 15:39"
+publishDate: "2022-11-07 15:39"
 ---

@@ -2,7 +2,7 @@
 draft: false
 title: "Mi enfoque"
 image: {
-    src: "https://media.licdn.com/dms/image/C560BAQHaVYd13rRz3A/company-logo_200_200/0/1638831589865?e=1702512000&v=beta&t=u1LVAxhGUCYerdi4BqYixOS94OD0Es6o70bz2KsmIXU",
+    src: "https://media.licdn.com/dms/image/C560BAQHaVYd13rRz3A/company-logo_200_200/0/1638831590218/linkedin_logo?e=1714003200&v=beta&t=JeQYvHttFLHZw6i8P61U6US2LRsGb-mGoYRHJTJcl4o",
     alt: "full stack web development"
 }
 href: "https://github.com/matias1812/clon_twiter"

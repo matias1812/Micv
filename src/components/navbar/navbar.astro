@@ -1,11 +1,10 @@
 ---
-import Container from "@components/container.astro";
+import Link from "@components/ui/link.astro";
+import Dropdown from "./dropdown.astro";
 import { Astronav, MenuItems, MenuIcon } from "astro-navbar";
+import Container from "@components/container.astro";
 
 const menuitems = [
-  {
-    children: [],
-  },
   {
     title: "Precios",
     path: "/precios"
@@ -24,37 +23,56 @@ const menuitems = [
   },
 ];
 ---
+
 <Container>
-  <header class="flex flex-col lg:flex-row justify-between items-center my-5">
+  <header class="flex flex-col lg:flex-row justify-between  items-center my-5">
     <Astronav>
-      <div class="flex w-full lg:w-auto items-center justify-between">
-        <a href="/" class="text-2xl">
-          <span class="font-bold text-slate-800">Matias</span>
-          <span class="text-slate-600">Torres</span>
-        </a>
-        <div class="block" >
-          <MenuIcon class="w-4 h-4 text-gray-800 lg:hidden" />
+      <div class="flex flex-row justify-between gap-20">
+        <div>
+          <div class="block lg:hidden">
+            <MenuIcon class="w-6 h-6 text-gray-800" />
+          </div>
+          <MenuItems class="hidden w-full lg:w-auto mt-2 lg:flex lg:mt-0">
+            <ul class="flex flex-col lg:flex-row lg:gap-3 mr-8">
+              {menuitems.map((item, index) => (
+                <li >
+                  <a
+                    href={item.path}
+                    class="flex lg:px-3 py-2 text-gray-600 hover:text-gray-900"
+                  >
+                    {item.title}
+                  </a>
+                </li>
+              ))}
+            </ul>
+          </MenuItems>
+        </div>
+        <div class="flex w-full ml-12 lg:w-auto items-center justify-between">
+          <a href="/" class="text-lg">
+            <span class="font-bold text-slate-800">Matias</span>
+            <span class="text-slate-500">Torres</span>
+          </a>
         </div>
       </div>
-      <MenuItems class="hidden w-full lg:w-auto mt-2 lg:flex lg:mt-0">
-        <ul class="flex flex-col lg:flex-row lg:gap-3">
-          {
-            menuitems.map((item, index) => (
-              <>
-                {!item.children && (
-                  <li>
-                    <a
-                      href={item.path}
-                      class="flex lg:px-3 py-2 text-gray-600 hover:text-gray-900">
-                      {item.title}
-                    </a>
-                  </li>
-                )}
-              </>
-            ))
-          }
-        </ul>
-      </MenuItems>    
     </Astronav>
   </header>
 </Container>
+
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+    const button = document.querySelector('#menu-button') as Element;
+    const menuOpen = document.querySelector(".menu-open") as Element;
+
+    if (!button) {
+      console.error("No se encontró el botón con id 'menu-button'");
+      return;
+    }
+
+    const toggleMenu = () => {
+      menuOpen.classList.toggle("hidden");
+    };
+
+    button?.removeEventListener("click", toggleMenu);
+    button?.addEventListener("click", toggleMenu);
+  });
+</script>

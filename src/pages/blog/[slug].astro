@@ -28,13 +28,13 @@ const { Content } = await entry.render();
       </span>
         <a
           href="/blog"
-          class="bg-gray-100 px-5 py-3 rounded-md hover:bg-gray-200 transition"
+          class="bg-gray-100 px-5 py-3 rounded-md hover:bg-gray-200 "
           >← Back</a
         >
       </div>
   
       <div class="flex flex-row ">
-        <img src={entry.data.image.src} alt=""  class="w-[4.5rem] flex " transition:animate="slide">
+        <img src={entry.data.image.src} alt=""  class="w-[4.5rem] flex ">
         <h1
           class="text-4xl lg:text-5xl font-bold lg:tracking-tight mt-1 lg:leading-tight">
           {entry.data.title}

@@ -36,8 +36,8 @@ dependencies:
     specifier: ^0.8.2
     version: 0.8.2
   astro-navbar:
-    specifier: ^1.1.1
-    version: 1.1.1
+    specifier: ^2.3.0
+    version: 2.3.0
   astro-seo:
     specifier: ^0.7.6
     version: 0.7.6
@@ -3517,8 +3517,8 @@ packages:
       svgo: 2.8.0
     dev: false
 
-  /astro-navbar@1.1.1:
-    resolution: {integrity: sha512-Qwy4caqcakAksD8uTzpjO0ERyapZXMDRxHcptg3dAu4S0xdwyjbqiPQywBLwkGk65D2vYBWWpu5nmGlJVu7vrQ==}
+  /astro-navbar@2.3.0:
+    resolution: {integrity: sha512-5xnSuEuFM27FyWguZNRWv210P8J4MHCabkj+oHd94x+96peL3QRXWKpupGyHoo4Vdz4aNYe1GolcoOJRoJb7cA==}
     dev: false
 
   /astro-seo@0.7.6:

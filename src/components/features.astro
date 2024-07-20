@@ -5,57 +5,39 @@ import { Icon } from "astro-icon";
 const features = [
   {
     title: "Vite",
-    description:
-      "Es una herramienta de compilación que tiene como objetivo proporcionar una experiencia de desarrollo más rápida y ágil para proyectos web modernos.",
     icon: "simple-icons:vite",
   },
   {
     title: "React",
-    description:
-      "Es una librería Javascript de código abierto diseñada para crear interfaces de usuario con el objetivo de facilitar el desarrollo de aplicaciones en una sola página.",
       icon: "simple-icons:react",
   },
   {
-    title: "Astro 3.0",
-    description:
-      "Es el primer marco web que admite la API View Transitions. Funde, desliza, transforma e incluso conserva elementos con estado en la navegación de la página con facilidad.",
-      icon: "simple-icons:astro",
-  },
-  {
     title: "JavaScript",
-    description:
-      "lenguaje de programación que los desarrolladores utilizan para hacer páginas web interactivas. Desde actualizar fuentes de redes sociales a mostrar animaciones y mapas interactivos, las funciones de JavaScript pueden mejorar la experiencia del usuario de un sitio web.",
       icon: "simple-icons:javascript",
   },
   {
     title: "TypeScript",
-    description:
-      "es un lenguaje de programación libre y de código abierto desarrollado y mantenido por Microsoft. Es un superconjunto de JavaScript, que esencialmente añade tipos estáticos y objetos basados en clases.",
       icon: "simple-icons:typescript",
   },
   {
     title: "Html",
-    description:
-      "El Lenguaje de Marcado de Hipertexto es el código que se utiliza para estructurar y desplegar una página web y sus contenidos. Por ejemplo, sus contenidos podrían ser párrafos, una lista con viñetas, o imágenes y tablas de datos.",
       icon: "simple-icons:html5",
   },
   {
     title: "Css",
-    description:
-      "CSS es un lenguaje para la composición y estructuración de páginas web.",
       icon: "simple-icons:css3",
   },
   {
     title: "Tailwind",
-    description:
-      "es una potente herramienta para el desarrollo frontend. Está dentro de la clasificación de los frameworks CSS o también llamados frameworks de diseño. Permite a los desarrolladores y diseñadores aplicar estilos a los sitios web de una manera ágil y optimizada.",
       icon: "simple-icons:tailwindcss",
   },
   {
-    title: "Next Ui",
-    description:
-      "es una biblioteca de interfaz de usuario de React que permite a los desarrolladores crear sitios web hermosos, modernos y rápidos, independientemente de su experiencia de diseño.",
-      icon: "simple-icons:tailwindcss",     
+    title: "Expo",
+      icon: "simple-icons:expo",     
+    },
+  {
+    title: "Python",
+      icon: "simple-icons:python",     
     },
 
 ];
@@ -67,16 +49,15 @@ const features = [
   </h2>
 </div>
 
-<div class="grid sm:grid-cols-2 md:grid-cols-3 mt-16 gap-16">
+<div class="grid sm:grid-cols-2 md:grid-cols-3 mt-16 gap-8">
   {
     features.map((item) => (
-      <div class="flex gap-4 items-start">
+      <div class="flex gap-2 items-start">
         <div class="mt-1 bg-black rounded-full  p-2 w-8 h-8 shrink-0">
           <Icon class="text-white" name={item.icon} />
         </div>
         <div>
           <h3 class="font-semibold text-lg">{item.title}</h3>{" "}
-          <p class="text-slate-500 mt-2 leading-relaxed">{item.description}</p>
         </div>
       </div>
     ))

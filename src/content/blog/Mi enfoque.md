@@ -2,7 +2,7 @@
 draft: false
 title: "Mi enfoque"
 image: {
-    src: "https://media.licdn.com/dms/image/C560BAQHaVYd13rRz3A/company-logo_200_200/0/1638831590218/linkedin_logo?e=1714003200&v=beta&t=JeQYvHttFLHZw6i8P61U6US2LRsGb-mGoYRHJTJcl4o",
+    src: "https://1000marcas.net/wp-content/uploads/2020/01/Logo-Linkedin.png",
     alt: "full stack web development"
 }
 href: "https://github.com/matias1812/clon_twiter"

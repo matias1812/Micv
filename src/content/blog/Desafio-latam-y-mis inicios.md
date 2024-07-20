@@ -3,7 +3,7 @@ draft: false
 title: "Desafio latam y mis inicios"
 href: "https://github.com/matias1812/frontend_sename/"
 image: {
-    src: "https://media.licdn.com/dms/image/D4D0BAQFPR6ZUmQw4AA/company-logo_200_200/0/1681130421284/desafiolatam_logo?e=1714003200&v=beta&t=z0SPDR8Z3CVFJr20bTUViyDYwponAxYgQF3yb1li6vs",
+    src: "https://i.pinimg.com/736x/87/a3/a8/87a3a86f76d7ded32198a0b70f00a156.jpg",
     alt: "data structures & algorithms"
 }
 publishDate: "2023-2-10 "

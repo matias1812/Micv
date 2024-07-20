@@ -2,12 +2,12 @@
 draft: false
 title: "Ingreso a No Country"
 image: {
-    src: "https://media.licdn.com/dms/image/C4D0BAQHJ8T4EUDhVTQ/company-logo_200_200/0/1657893488557/nocountryforjuniordevs_logo?e=1714003200&v=beta&t=Oj7xV12KWthIxR43GxmK-b6MEFVC-Jiq3Ze_SvnkbQk",
+    src: "https://yt3.googleusercontent.com/0xZ_zs2PoUxaUVzGwM4VCKoxWBt9Y7qoJeOFFoz85JHTqu7rj0BW5ZEOxV1mXd09kTDgYf6DHg=w2276-fcrop64=1,00005a57ffffa5a8-k-c0xffffffff-no-nd-rj",
     alt: "frontend master"
 }
 href: "https://github.com/No-Country/c13-44-front-js-supabase"
 publishDate: "2023-9-15"
-category: "Mi independencia"
+category: "Primer team"
 author: "Matias Torres"
 tags: [Zustand, Supabase, Next ui, Typescript, Valibot, Wouter, Figma]
 ---

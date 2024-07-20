@@ -1,5 +1,4 @@
 ---
-// @ts-ignore
 import { Icon } from "astro-icon";
 
 const features = [
@@ -9,57 +8,114 @@ const features = [
   },
   {
     title: "React",
-      icon: "simple-icons:react",
+    icon: "simple-icons:react",
   },
   {
     title: "JavaScript",
-      icon: "simple-icons:javascript",
+    icon: "simple-icons:javascript",
   },
   {
     title: "TypeScript",
-      icon: "simple-icons:typescript",
+    icon: "simple-icons:typescript",
   },
   {
     title: "Html",
-      icon: "simple-icons:html5",
+    icon: "simple-icons:html5",
   },
   {
     title: "Css",
-      icon: "simple-icons:css3",
+    icon: "simple-icons:css3",
   },
   {
     title: "Tailwind",
-      icon: "simple-icons:tailwindcss",
+    icon: "simple-icons:tailwindcss",
   },
   {
     title: "Expo",
-      icon: "simple-icons:expo",     
-    },
+    icon: "simple-icons:expo",
+  },
   {
     title: "Python",
-      icon: "simple-icons:python",     
-    },
-
+    icon: "simple-icons:python",
+  },
+  {
+    title: "Flask",
+    icon: "simple-icons:flask",
+  },
 ];
 ---
 
-<div class="mt-16 md:mt-0">
+<div class=" md:mt-0">
   <h2 class="text-4xl lg:text-5xl font-bold lg:tracking-tight">
-    Manejo tecnologias como:
+    Manejo tecnologías como:
   </h2>
 </div>
 
-<div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-6 lg:grid-cols-9 xl:grid-cols-9 mt-16 gap-8">
-  {
-    features.map((item) => (
-      <div class="flex flex-col justify-center text-center items-center gap-2 max-w-40">
-        <div class="mt-1 bg-black rounded-full  p-2 w-8 h-8 shrink-0">
-          <Icon class="text-white" name={item.icon} />
+<div class="carousel-container">
+  <div class="carousel">
+    {
+      features.map((item) => (
+        <div class="carousel-item" key={item.title}>
+          <div class="icon-container mt-1 bg-black rounded-full p-2 w-8 h-8 shrink-0">
+            <Icon class="text-white" name={item.icon} />
+          </div>
+          <div>
+            <h3 class="font-semibold text-xl">{item.title}</h3>
+          </div>
         </div>
-        <div>
-          <h3 class="font-semibold text-xl">{item.title}</h3>{" "}
+      ))
+    }
+  </div>
+  <div class="carousel">
+    {
+      features.map((item) => (
+        <div class="carousel-item" key={item.title}>
+          <div class="icon-container mt-1 bg-black rounded-full p-2 w-8 h-8 shrink-0">
+            <Icon class="text-white" name={item.icon} />
+          </div>
+          <div>
+            <h3 class="font-semibold text-xl">{item.title}</h3>
+          </div>
         </div>
-      </div>
-    ))
-  }
+      ))
+    }
+  </div>
 </div>
+
+<style>
+.carousel-container {
+  overflow: hidden;
+  width: 100%;
+  margin-top: 4rem; /* Ajuste de margen superior */
+  display: flex;
+  position: relative;
+}
+
+.carousel {
+  display: flex;
+  animation: scroll 20s linear infinite;
+  flex: 0 0 auto;
+}
+
+.carousel-item {
+  width: 150px; /* Ajusta este valor según tus necesidades */
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  flex-direction: column; /* Hace que el icono esté encima del texto */
+}
+
+.icon-container {
+  margin-bottom: 0.5rem; /* Espacio entre el icono y el texto */
+}
+
+@keyframes scroll {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}
+</style>

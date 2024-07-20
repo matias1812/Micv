@@ -23,20 +23,19 @@ const { Content } = await entry.render();
   <Container>
     <div class="mx-auto max-w-3xl mt-14">
       <div class="flex flex-row justify-between mt-8">
-      <span class="text-blue-400 uppercase tracking-wider text-sm font-medium">
-        {entry.data.category}
-      </span>
+        <span class="text-blue-400 uppercase tracking-wider text-sm font-medium">
+          {entry.data.category}
+        </span>
         <a
           href="/blog"
-          class="bg-gray-100 px-5 py-3 rounded-md hover:bg-gray-200 "
+          class="bg-gray-100 px-5 py-3 rounded-md hover:bg-gray-200"
           >← Back</a
         >
       </div>
   
       <div class="flex flex-row ">
-        <img src={entry.data.image.src} alt=""  class="w-[4.5rem] flex ">
-        <h1
-          class="text-4xl lg:text-5xl font-bold lg:tracking-tight mt-1 lg:leading-tight">
+        <img src={entry.data.image.src} alt="" class="w-[10rem] flex">
+        <h1 class="text-4xl lg:text-5xl font-bold lg:tracking-tight mt-1 lg:leading-tight">
           {entry.data.title}
         </h1>
       </div>
@@ -65,16 +64,18 @@ const { Content } = await entry.render();
     <div class="mx-auto prose prose-lg mt-6 max-w-3xl">
       <Content />
     </div>
-    <div class="flex flex-row items-center justify-center mt-4">
-      <Link
-      size="lg"
-      rel="noopener"
-      href={entry.data.href}
-      class="flex flex-row items-center justify-center w-[15rem]"
-      target="_blank">
-      <Icon class="text-white w-10 h-10 m-1" name="bx:bxl-github" />
-      Repo del proyecto
-    </Link>
-    </div>
+    {entry.data.href && (
+      <div class="flex flex-row items-center justify-center mt-4">
+        <Link
+          size="lg"
+          rel="noopener"
+          href={entry.data.href}
+          class="flex flex-row items-center justify-center w-[15rem]"
+          target="_blank">
+          <Icon class="text-white w-10 h-10 m-1" name="bx:bxl-github" />
+          Repo del proyecto
+        </Link>
+      </div>
+    )}
   </Container>
 </Layout>

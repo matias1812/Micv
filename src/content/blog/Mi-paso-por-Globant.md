@@ -20,7 +20,6 @@ La mejor empresa en la que he estado fue durante una pasantía de tres meses, do
 	•	Entrenamiento de AI: Utilizando tecnologías como Genexus y Chat gpt api.
 	•	Nube y automatización: Implementando soluciones en GCP y AWS, y desarrollando automatizaciones.
 
-¿Hay algo más que quieras añadir o ajustar?
 
 ## Herramientas, lenguajes y Certificados obtenidas 
 

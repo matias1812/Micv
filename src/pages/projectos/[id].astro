@@ -1,0 +1,49 @@
+---
+import Layout from "@layouts/Layout.astro";
+import { Picture } from "@astrojs/image/components";
+import { getCollection } from "astro:content";
+import Container from "@components/container.astro";
+
+const { id } = Astro.params;
+
+let projects;
+if (id) {
+  projects = (await getCollection("projects")).find(
+    (projects) => projects.data.id == id
+  );
+}
+
+export async function getStaticPaths() {
+  const projectss = await getCollection("projects");
+  return projectss.map((projects) => ({
+    params: { id: projects.data.id },
+  }));
+}
+---
+
+<Layout title={`certificado ${id}`}>
+  <Container>
+    <div class="flex flex-row justify-between mt-[3rem]">
+      <span class="text-blue-400 uppercase tracking-wider text-md font-bold">
+        {projects.data.title}
+      </span>
+        <a
+          href="/"
+          class="bg-gray-100 px-5 py-3 rounded-md hover:bg-gray-200"
+          >← Back</a
+        >
+      </div>
+    <div class="gap-10 mx-auto max-w-3xl mt-12">
+      <Picture
+        src={projects.data.avatar.src}
+        alt={projects.data.avatar.alt}
+        position="center"
+        sizes="(max-width-auto}"
+        widths={[5000]}
+        aspectRatio="800:600"
+        class="w-full rounded-md"
+      />
+      <Container />
+    </div>
+  </Container>
+</Layout>

@@ -1,0 +1,57 @@
+---
+import { getCollection } from "astro:content";
+import { Picture } from "@astrojs/image/components";
+import Layout from "@layouts/Layout.astro";
+import Container from "@components/container.astro";
+import Sectionhead from "@components/sectionhead.astro";
+
+const projectos = await getCollection("projects", ({ data }) => {
+  return !data.draft;
+});
+
+---
+
+
+<Layout title="projectos">
+  <Container>
+    <Sectionhead>
+      <Fragment slot="title">Mis projectos:</Fragment>
+      <Fragment slot="desc"></Fragment>
+    </Sectionhead>
+    <div class="grid md:grid-cols-3 gap-10 mx-auto max-w-6xl mt-12"
+    >
+    {
+      projectos.map((projecto) => (
+        <a
+         href={`/projectos/${projecto.data.id}`}
+        >
+        <div class="group">
+            <div class="max-w-full">
+              <Picture
+                src={projecto.data.avatar.src}
+                alt={projecto.data.avatar.alt}
+                sizes="(max-width: 700px) 100vw, 400px"
+                widths={[200, 700]}
+                aspectRatio="16:9"
+                background="#ffffff"
+                fit="cover"
+                position="center"
+                class="w-full rounded-md max-h-600 group-hover:-translate-y-1 group-hover:shadow-xl"
+              />
+            </div>
+
+            <div class="mt-6 text-center">
+              <h2 class="text-lg text-gray-800">
+                {projecto.data.name}
+              </h2>
+              <h3 class="text-sm text-slate-500">
+                {projecto.data.title}
+              </h3>
+            </div>
+          </div>
+          </a>
+        ))
+      }
+    </div>
+  </Container>
+</Layout>

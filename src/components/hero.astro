@@ -6,9 +6,8 @@ import { Icon } from "astro-icon";
 import cv from "../../public/MatiasT.pdf"
 ---
 
-<main
-  class="grid lg:grid-cols-2 place-items-center pb-8 md:pb-24">
-  <div class=" lg:order-1 hidden lg:block">
+<main class="grid lg:grid-cols-2 place-items-center pb-8 md:pb-24">
+  <div class="lg:order-1 hidden lg:block">
     <Picture
       src={logoImage}
       alt="Astronaut in the air"
@@ -17,18 +16,18 @@ import cv from "../../public/MatiasT.pdf"
       sizes="(max-width: 200px) 100vw, 600px"
       loading="eager"
       format="avif"
+      class="float-animation"
     />
   </div>
   <div>
-    <h1
-      class="text-5xl lg:text-6xl xl:text-7xl font-bold lg:tracking-tight xl:tracking-tighter">
+    <h1 class="text-5xl lg:text-6xl xl:text-7xl font-bold lg:tracking-tight xl:tracking-tighter">
       Frontend Developer
     </h1>
     <p class="text-lg mt-4 text-slate-600 max-w-xl">
       Me desenvuelvo como diseñador web, maketador, experiencia de usuario, manejando diversas tecnologias y lenguajes en los cuales constantemente pongo en practica.
     </p>
     <p class="text-lg mt-4 text-slate-600 max-w-lg">
-      Visita mi GitHub para ver mis proyectos. 
+      Visita mi GitHub para ver mis proyectos.
     </p>
     <div class="mt-12 flex flex-col sm:flex-row gap-3">
       <Link
@@ -41,14 +40,14 @@ import cv from "../../public/MatiasT.pdf"
         Descargar cv
       </Link>
       <Link
-      size="lg"
-      rel="noopener"
-      href="https://www.linkedin.com/in/matias-torres-developer-freelance/"
-      class="flex gap-1 items-center justify-center"
-      target="_blank">
-      <Icon class="text-white w-5 h-5" name="bx:bxl-linkedin" />
-      Mi Linkendin.
-    </Link>
+        size="lg"
+        rel="noopener"
+        href="https://www.linkedin.com/in/matias-torres-developer-freelance/"
+        class="flex gap-1 items-center justify-center"
+        target="_blank">
+        <Icon class="text-white w-5 h-5" name="bx:bxl-linkedin" />
+        Mi Linkendin.
+      </Link>
       <Link
         size="lg"
         style="outline"
@@ -62,3 +61,21 @@ import cv from "../../public/MatiasT.pdf"
     </div>
   </div>
 </main>
+
+<style>
+@keyframes float {
+  0% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-16px);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+
+.float-animation {
+  animation: float 2s ease-in-out infinite;
+}
+</style>

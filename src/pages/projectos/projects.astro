@@ -22,7 +22,7 @@ const projectos = await getCollection("projects", ({ data }) => {
     {
       projectos.map((projecto) => (
         <a
-         href={`/projectos/${projecto.data.id}`}
+         href={`${projecto.data.url}`}
         >
         <div class="group">
             <div class="max-w-full">

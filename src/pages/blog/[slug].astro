@@ -20,31 +20,32 @@ const { Content } = await entry.render();
 ---
 
 <Layout title={entry.data.title}>
-  <Container>
-    <div class="mx-auto max-w-3xl mt-14">
-      <div class="flex flex-row justify-between mt-8">
-        <span class="text-blue-400 uppercase tracking-wider text-sm font-medium">
-          {entry.data.category}
-        </span>
-        <a
+  <div class="pt-32">
+    <Container>
+      <div class="mx-auto max-w-3xl mt-400">
+        <div class="flex flex-row justify-between mt-8">
+          <span class="text-blue-400 uppercase tracking-wider text-sm font-medium">
+            {entry.data.category}
+          </span>
+          <a
           href="/blog"
           class="bg-gray-100 px-5 py-3 rounded-md hover:bg-gray-200"
           >← Back</a
-        >
-      </div>
-  
-      <div class="flex flex-row ">
-        <img src={entry.data.image.src} alt="" class="w-[10rem] flex">
-        <h1 class="text-4xl lg:text-5xl font-bold lg:tracking-tight mt-1 lg:leading-tight">
-          {entry.data.title}
-        </h1>
-      </div>
-      <div class="flex gap-2 mt-3 items-center flex-wrap md:flex-nowrap">
-        <span class="text-gray-400">
-          {entry.data.author}
-        </span>
-        <span class="text-gray-400">•</span>
-        <time
+          >
+        </div>
+        
+        <div class="flex flex-row ">
+          <img src={entry.data.image.src} alt="" class="w-[8rem] lg:w-[10rem] flex">
+          <h1 class="text-3xl lg:text-5xl font-bold lg:tracking-tight mt-1 lg:leading-tight">
+            {entry.data.title}
+          </h1>
+        </div>
+        <div class="flex gap-2 mt-3 items-center flex-wrap md:flex-nowrap">
+          <span class="text-gray-400">
+            {entry.data.author}
+          </span>
+          <span class="text-gray-400">•</span>
+          <time
           class="text-gray-400"
           datetime={entry.data.publishDate.toISOString()}>
           {entry.data.publishDate.toDateString()}
@@ -78,4 +79,5 @@ const { Content } = await entry.render();
       </div>
     )}
   </Container>
+</div>
 </Layout>

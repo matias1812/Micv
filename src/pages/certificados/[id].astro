@@ -22,19 +22,20 @@ export async function getStaticPaths() {
 ---
 
 <Layout title={`certificado ${id}`}>
-  <Container>
-    <div class="flex flex-row justify-between mt-[3rem]">
-      <span class="text-blue-400 uppercase tracking-wider text-md font-bold">
-        {certificado.data.title}
-      </span>
+  <div class="pt-10 lg:pt-32">
+    <Container>
+      <div class="flex flex-row justify-between mt-[3rem]">
+        <span class="text-blue-400 uppercase tracking-wider text-md font-bold">
+          {certificado.data.title}
+        </span>
         <a
-          href="/certificados"
-          class="bg-gray-100 px-5 py-3 rounded-md hover:bg-gray-200"
-          >← Back</a
+        href="/certificados"
+        class="bg-gray-100 px-5 py-3 rounded-md hover:bg-gray-200"
+        >← Back</a
         >
       </div>
-    <div class="gap-10 mx-auto max-w-3xl mt-12">
-      <Picture
+      <div class="gap-10 mx-auto max-w-3xl mt-12">
+        <Picture
         src={certificado.data.avatar.src}
         alt={certificado.data.avatar.alt}
         position="center"
@@ -42,8 +43,9 @@ export async function getStaticPaths() {
         widths={[5000]}
         aspectRatio="800:600"
         class="w-full rounded-md"
-      />
-      <Container />
-    </div>
-  </Container>
-</Layout>
+        />
+        <Container />
+      </div>
+    </Container>
+  </div>
+  </Layout>

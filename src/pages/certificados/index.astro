@@ -12,19 +12,19 @@ const certificados = await getCollection("team", ({ data }) => {
 ---
 
 
-<Layout title="certificados">
-  <Container>
-    <Sectionhead>
-      <Fragment slot="title">Mis certificados:</Fragment>
-      <Fragment slot="desc"></Fragment>
-    </Sectionhead>
-    <div class="grid md:grid-cols-3 gap-10 mx-auto max-w-6xl mt-12"
-    >
-    {
-      certificados.map((certificado) => (
-        <a
-         href={`/certificados/${certificado.data.id}`}
-        >
+<Layout title="certificados" >
+  <div class="pt-20">
+    <Container >
+      <div class="flex justify-center text-center text-5xl font-semibold ">
+        <h1>Mis certificados:</h1>
+      </div>
+      <div class="grid md:grid-cols-3 gap-10 mx-auto max-w-6xl mt-12"
+      >
+      {
+        certificados.map((certificado) => (
+          <a
+          href={`/certificados/${certificado.data.id}`}
+          >
         <div class="group">
             <div class="max-w-full aspect-square">
               <Picture
@@ -37,7 +37,7 @@ const certificados = await getCollection("team", ({ data }) => {
                 fit="cover"
                 position="center"
                 class="w-full rounded-md group-hover:-translate-y-1 group-hover:shadow-xl"
-              />
+                />
             </div>
 
             <div class="mt-4 text-center">
@@ -53,5 +53,7 @@ const certificados = await getCollection("team", ({ data }) => {
         ))
       }
     </div>
-  </Container>
+  </div>
+</Container>
+</div>  
 </Layout>

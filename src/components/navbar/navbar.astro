@@ -5,6 +5,11 @@ import { Astronav, MenuItems, MenuIcon } from "astro-navbar";
 import Container from "@components/container.astro";
 
 const menuitems = [
+{
+    title: "Home",
+    path: "/",
+  },
+
   {
     title: "Certificados",
     path: "/certificados",
@@ -20,33 +25,47 @@ const menuitems = [
 ];
 ---
 
-<Container>
-  <header class="flex fixed w-[100%] z-50 bg-white h-[5rem] flex-col lg:flex-row justify-between items-center ">
+
+  <header class="flex  fixed w-[100%] z-50 bg-white h-[3rem] lg:h-[6rem] flex-col lg:flex-row justify-between items-center">
     <Astronav>
-      <div class="flex w-full lg:w-auto items-center justify-between">
-        <a href="/" class="text-lg"
-          ><span class="font-bold text-slate-800">Matias</span><span
-            class="text-slate-500">Torres</span
-          >
+      <div class="flex w-full lg:w-auto items-center justify-between px-5 pt-3">
+        <a href="/" class="text-lg">
+          <span class="font-bold text-slate-800">Matias</span><span class="text-slate-500">Torres</span>
         </a>
-        <div class="block lg:hidden">
-          <MenuIcon class="w-4 h-4 text-gray-800" />
+        <div class="block lg:hidden menu-icon">
+          <MenuIcon class="w-6 h-6 text-gray-800" />
         </div>
       </div>
-      <MenuItems class="hidden w-full lg:w-auto mt-2 lg:flex lg:mt-0">
-        <ul class="flex flex-col lg:flex-row lg:gap-3 mr-8">
-          {menuitems.map((item, index) => (
+      <MenuItems class="hidden lg:flex lg:flex-row lg:gap-3  lg:mt-0 menu-items">
+        <ul class="flex flex-col lg:flex-row lg:gap-3 mr-8 ">
+          {menuitems.map((item) => (
             <li >
-              <a
-                href={item.path}
-                class="flex lg:px-3 py-2 text-gray-600 hover:text-gray-900"
-              >
+              <a href={item.path} class="flex lg:px-3 py-2 text-gray-600 hover:text-gray-900">
                 {item.title}
               </a>
             </li>
           ))}
         </ul>
       </MenuItems>
+      <div class="lg:hidden  bg-white w-[100%] hidden menu-items">
+        <ul class="flex flex-col gap-3">
+          {menuitems.map((item) => (
+            <li >
+              <a href={item.path} class="block text-gray-600 hover:text-gray-900 py-2 px-4 pb-4">
+                {item.title}
+              </a>
+            </li>
+          ))}
+        </ul>
+      </div>
     </Astronav>
   </header>
-</Container>
+
+<script>
+  const menuIcon = document.querySelector('.menu-icon');
+  const menuItems = document.querySelectorAll('.menu-items');
+
+  menuIcon.addEventListener('click', () => {
+    menuItems.forEach(item => item.classList.toggle('hidden'));
+  });
+</script>

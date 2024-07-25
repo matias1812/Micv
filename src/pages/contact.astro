@@ -9,35 +9,38 @@ import QR from "../assets/qr.jpeg"
 ---
 
 <Layout title="Contact">
-  <Container>
-    <Sectionhead>
-      <Fragment slot="title">Mi contacto</Fragment>
-      <Fragment slot="desc">Contacteme por cualquier consulta o para contratar mis servicios.</Fragment>
-    </Sectionhead>
-    <div class="grid md:grid-cols-2 gap-10 mx-auto max-w-4xl mt-16">
-      <div>
-        <h2 class="font-medium text-2xl text-gray-800">WhatsApp</h2>
-        <Picture src={QR} alt="" widths={[100, 200, 400]} sizes="(max-width: 200px) 100vw, 200px"
-        />
-        <div class="mt-5">
-          <div class="flex items-center mt-2 space-x-2 text-gray-600">
-            <Icon class="text-gray-400 w-4 h-4" name="uil:map-marker" />
-            <span>Chile, Coquimbo, La Serena.</span>
-          </div><div class="flex items-center mt-2 space-x-2 text-gray-600">
-            <Icon class="text-gray-400 w-4 h-4" name="uil:envelope" /><a
+  <div class="pt-32">
+
+    <Container>
+      <Sectionhead>
+        <Fragment slot="title">Mi contacto</Fragment>
+        <Fragment slot="desc">Contacteme por cualquier consulta o para contratar mis servicios.</Fragment>
+      </Sectionhead>
+      <div class="grid md:grid-cols-2 gap-10 mx-auto max-w-4xl mt-16">
+        <div>
+          <h2 class="font-medium text-2xl text-gray-800">WhatsApp</h2>
+          <Picture src={QR} alt="" widths={[100, 200, 400]} sizes="(max-width: 200px) 100vw, 200px"
+          />
+          <div class="mt-5">
+            <div class="flex items-center mt-2 space-x-2 text-gray-600">
+              <Icon class="text-gray-400 w-4 h-4" name="uil:map-marker" />
+              <span>Chile, Coquimbo, La Serena.</span>
+            </div><div class="flex items-center mt-2 space-x-2 text-gray-600">
+              <Icon class="text-gray-400 w-4 h-4" name="uil:envelope" /><a
               href="mailto:hello@astroshipstarter.com"
               >Matias.torres1812@gmail.com</a
-            >
-          </div><div class="flex items-center mt-2 space-x-2 text-gray-600">
-            <Icon class="text-gray-400 w-4 h-4" name="uil:phone" /><a
+              >
+            </div><div class="flex items-center mt-2 space-x-2 text-gray-600">
+              <Icon class="text-gray-400 w-4 h-4" name="uil:phone" /><a
               href="tel:+1 (987) 4587 899">+56 9 4415 7085</a
-            >
+              >
+            </div>
           </div>
         </div>
+        <div>
+          <Contactform />
+        </div>
       </div>
-      <div>
-        <Contactform />
-      </div>
-    </div>
-  </Container>
+    </Container>
+  </div>
 </Layout>

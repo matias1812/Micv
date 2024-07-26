@@ -1,0 +1,59 @@
+---
+import { Picture } from "@astrojs/image/components";
+
+const recommendations = [
+  {
+    id: 2,
+    url: 'https://www.linkedin.com/in/ivanolivaresrojas/',
+    img: 'https://media.licdn.com/dms/image/C4D03AQE9bT-h5HXdfQ/profile-displayphoto-shrink_100_100/0/1656977265798?e=1727308800&v=beta&t=5VdkNeetYRtm8EC9zVcA7W4PjbQegLDTAvjsyeG13NY',
+    name: "Iván Olivares Rojas",
+    relationship: "Technical Manager @ Globant | Asesoramiento en Tecnología | Web Performance Advocate | Media & OTT Platforms | Observabilidad",
+    content: "He tenido la suerte de ser el mentor de Matias durante su destacada pasantía en Globant. Desde el primer día, Matias mostró un compromiso excepcional y siempre fue más allá en su búsqueda de la excelencia en cada tarea que emprendió. Aunque hoy Matias no cuenta con muchos años de experiencia como programador, ha avanzado notablemente en su camino y capacidades técnicas. En cada proyecto que se involucró, demostró una sólida comprensión de las tecnologías y lenguajes como JavaScript y React/ReactNative, logrando desarrollar soluciones efectivas, demostrando su capacidad para enfrentar desafíos técnicos y encontrar soluciones innovadoras. Matias posee una habilidad innata para pensar creativamente y organizar sus ideas en torno a objetivos claros. Esto es algo que rara vez veo en desarrolladores al inicio de sus carreras y me sentí siempre sorprendido. Su capacidad para colaborar con el equipo, comunicar sus ideas efectivamente e involucrarse activamente en iniciativas demuestra un potencial como desarrollador de software de forma significativa. Trabajar con Matias ha sido una experiencia muy enriquecedora. Estoy convencido de que su actitud proactiva, sus habilidades técnicas y su pensamiento innovador serán una gran ganancia para cualquier equipo. Recomiendo a Matias sin reservas para cualquier posición que busque un talento joven, comprometido y con un gran potencial de crecimiento.",
+    date: "26 de julio de 2024, Iván asesoraba a Matias",
+  },
+  {
+    id: 1,
+    url: 'https://www.linkedin.com/in/justomiguel/',
+    img: 'https://media.licdn.com/dms/image/D4E03AQFT0MLez8hDwg/profile-displayphoto-shrink_100_100/0/1698182512490?e=1727308800&v=beta&t=kqsRE5SmcJD1PSPWJgy7giawHdC5gHFvdNyEGiMd2ts',
+    name: "Justo Miguel Vargas",
+    relationship: "VP Technology/Tech Partner en Globant | Cofounder & CKO Unlearni | Te ayudo a usar la IA para potenciar tu trabajo y tu aprendizaje #lifelonglearner",
+    content: "Tuve el privilegio de supervisar a Matías durante sus prácticas en Globant y puedo afirmar con plena confianza que su desempeño fue sobresaliente. Matías se distinguió como un desarrollador front-end talentoso y dedicado, demostrando una sólida comprensión de los principios de desarrollo web y una notable habilidad para aplicarlos en proyectos prácticos. La actitud positiva de Matías, su disposición para aprender y su entusiasmo por enfrentar nuevos desafíos fueron verdaderamente inspiradores. Estoy convencido de que Matías será una valiosa incorporación para cualquier equipo de desarrollo front-end. Su pasión por la tecnología y su compromiso con la excelencia lo destacan como un profesional de primera categoría. Recomiendo a Matías sin reservas para cualquier oportunidad en el campo del desarrollo front-end.",
+    date: "24 de julio de 2024, Justo Miguel supervisaba directamente a Matias",
+  },
+];
+---
+
+<style>
+  .scrollable-content {
+    max-height: 8rem;
+    overflow-y: scroll;
+  }
+</style>
+
+<h1 class="text-center mt-20 text-3xl font-bold">Recomendaciones:</h1>
+<div class="flex flex-col lg:flex-row gap-10 px-5 lg:px-20 pt-10">
+  {recommendations.map((rec) => (
+    <div class="border p-4 rounded-lg shadow-md w-full h-auto" >
+      <a href={rec.url}>
+        <div class="flex flex-row items-center">
+          <Picture
+            src={rec.img}
+            alt="Astronaut in the air"
+            widths={[200, 400, 200]}
+            aspectRatio="4:4"
+            sizes="(max-width: 200px) 100vw, 50px"
+            loading="eager"
+            format="avif"
+            class="rounded-3xl mr-2"
+        />
+          <h2 class="text-xl font-bold">{rec.name}</h2>
+        </div>
+        <p class="text-gray-500 text-xs mt-2">{rec.relationship}</p>
+      </a>
+      <div class="mt-2 w-full scrollable-content">
+        {rec.content}
+      </div>
+      <p class="mt-2 text-sm text-gray-400">{rec.date}</p>
+    </div>
+  ))}
+</div>

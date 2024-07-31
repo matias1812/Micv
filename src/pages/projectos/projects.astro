@@ -13,11 +13,8 @@ const projectos = await getCollection("projects", ({ data }) => {
 
 
   <Container>
-    <Sectionhead>
-      <Fragment slot="title">Mis proyectos:</Fragment>
-      <Fragment slot="desc"></Fragment>
-    </Sectionhead>
-    <div class="grid sm:grid-cols-2 md:grid-cols-3  lg:grid-cols-3 gap-10 mx-auto max-w-6xl mt-12"
+    <h1 class="text-start mt-10 lg:mt-14 text-4xl lg:text-5xl font-bold">Mis proyectos:</h1>
+    <div class="grid sm:grid-cols-2 md:grid-cols-3  lg:grid-cols-3 gap-10 mx-auto max-w-6xl mt-16"
     >
     {
       projectos.map((projecto) => (

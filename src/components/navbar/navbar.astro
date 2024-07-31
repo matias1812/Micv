@@ -5,11 +5,10 @@ import { Astronav, MenuItems, MenuIcon } from "astro-navbar";
 import Container from "@components/container.astro";
 
 const menuitems = [
-{
+  {
     title: "Home",
     path: "/",
   },
-
   {
     title: "Certificados",
     path: "/certificados",
@@ -25,47 +24,87 @@ const menuitems = [
 ];
 ---
 
+<style>
+  .menu-item a {
+    position: relative;
+    overflow: hidden;
+    transition: color 0.3s ease;
+  }
+  .menu-item a::before {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    bottom: 0;
+    left: -100%;
+    background-color: #6366f1; /* Tailwind Indigo-500 */
+    transition: left 0.3s ease;
+  }
+  .menu-item a:hover::before {
+    left: 0;
+  }
+  .menu-item a:hover {
+    color: #1f2937; /* Tailwind Gray-900 */
+  }
+  .brand {
+    display: inline-block;
+    animation: none;
+  }
+  .brand:hover {
+    animation: rotate 1s ease-in-out;
+  }
+  @keyframes rotate {
+    from {
+      transform: rotateX(0);
+    }
+    to {
+      transform: rotateX(360deg);
+    }
+  }
+</style>
 
-  <header class="flex  fixed w-[100%] z-50 bg-white h-[3rem] lg:h-[6rem] flex-col lg:flex-row justify-between items-center">
-    <Astronav>
-      <div class="flex w-full lg:w-auto items-center justify-between px-5 pt-3">
-        <a href="/" class="text-lg">
-          <span class="font-bold text-slate-800">Matias</span><span class="text-slate-500">Torres</span>
-        </a>
-        <div class="block lg:hidden menu-icon">
-          <MenuIcon class="w-6 h-6 text-gray-800" />
-        </div>
+<header class="flex fixed w-[100%] z-50 bg-white h-[3rem] lg:h-[6rem] flex-col lg:flex-row justify-between items-center">
+  <Astronav>
+    <div class="flex w-full lg:w-auto items-center justify-between px-5 pt-3">
+      <a href="/" class="text-lg ">
+        <span class="font-bold text-slate-800 brand">Matias</span><span class="text-slate-500 brand">Torres</span>
+      </a>
+      <div class="block lg:hidden menu-icon">
+        <MenuIcon class="w-6 h-6 text-gray-800" />
       </div>
-      <MenuItems class="hidden lg:flex lg:flex-row lg:gap-3  lg:mt-0 menu-items">
-        <ul class="flex flex-col lg:flex-row lg:gap-3 mr-8 ">
-          {menuitems.map((item) => (
-            <li >
-              <a href={item.path} class="flex lg:px-3 py-2 text-gray-600 hover:text-gray-900">
-                {item.title}
-              </a>
-            </li>
-          ))}
-        </ul>
-      </MenuItems>
-      <div class="lg:hidden  bg-white w-[100%] hidden menu-items">
-        <ul class="flex flex-col gap-3">
-          {menuitems.map((item) => (
-            <li >
-              <a href={item.path} class="block text-gray-600 hover:text-gray-900 py-2 px-4 pb-4">
-                {item.title}
-              </a>
-            </li>
-          ))}
-        </ul>
-      </div>
-    </Astronav>
-  </header>
+    </div>
+    <MenuItems class="hidden lg:flex lg:flex-row lg:gap-3 lg:mt-0 menu-items">
+      <ul class="flex flex-col lg:flex-row lg:gap-3 mr-8">
+        {menuitems.map((item) => (
+          <li class="menu-item">
+            <a href={item.path} class="flex lg:px-3 py-2 text-gray-600 hover:text-gray-900">
+              {item.title}
+            </a>
+          </li>
+        ))}
+      </ul>
+    </MenuItems>
+    <div class="lg:hidden bg-white w-[100%] hidden menu-items">
+      <ul class="flex flex-col gap-3">
+        {menuitems.map((item) => (
+          <li class="menu-item">
+            <a href={item.path} class="block text-gray-600 hover:text-gray-900 py-2 px-4 pb-4">
+              {item.title}
+            </a>
+          </li>
+        ))}
+      </ul>
+    </div>
+  </Astronav>
+</header>
 
 <script>
-  const menuIcon = document.querySelector('.menu-icon');
-  const menuItems = document.querySelectorAll('.menu-items');
+  document.addEventListener('DOMContentLoaded', () => {
+    const menuIcon = document.querySelector('.menu-icon');
+    const menuItems = document.querySelectorAll('.menu-items');
 
-  menuIcon.addEventListener('click', () => {
-    menuItems.forEach(item => item.classList.toggle('hidden'));
+    menuIcon.addEventListener('click', () => {
+      menuItems.forEach(item => item.classList.toggle('hidden'));
+    });
   });
 </script>

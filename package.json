@@ -10,7 +10,7 @@
     "astro": "astro"
   },
   "engines": {
-    "node": "24.x"
+    "node": ">=18 <25"
   },
   "dependencies": {
     "@astrojs/image": "^0.17.3",

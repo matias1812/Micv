@@ -1,9 +1,9 @@
 ---
 draft: false
 id: "1"
-name: "M.D.W.cl"
-title: "Matias desarrollo web, La Serena"
-url: "https://my-web-git-main-matias1812s-projects.vercel.app"
+name: "Barberia"
+title: "Barberia, La Serena"
+url: "https://barberia-front.vercel.app/"
 avatar: {
     src: "https://iili.io/dx1Dx8x.png",
     alt: "matias"

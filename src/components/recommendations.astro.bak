@@ -14,7 +14,7 @@ const recommendations = [
   {
     id: 1,
     url: 'https://www.linkedin.com/in/justomiguel/',
-    img: 'https://res.cloudinary.com/dbaxe3y5n/image/fetch/f_auto,q_auto,fl_lossy/https%3A%2F%2Fmedia.licdn.com%2Fdms%2Fimage%2Fv2%2FD4E03AQEAm3u5Mp5oOw%2Fprofile-displayphoto-scale_100_100%2FB4EZmCIeWlKYAg-%2F0%2F1758824884382%3Fe%3D1762992000%26v%3Dbeta%26t%3DpgH4bz8gPV7nZwpI8FLPh72deLP3jsSk5bsnUkiFU5M',
+    img: 'https://media.licdn.com/dms/image/v2/D4E03AQEAm3u5Mp5oOw/profile-displayphoto-scale_100_100/B4EZmCIeWlKYAg-/0/1758824884382?e=1762992000&v=beta&t=pgH4bz8gPV7nZwpI8FLPh72deLP3jsSk5bsnUkiFU5M',
     name: "Justo Miguel Vargas",
     relationship: "VP Technology/Tech Partner en Globant | Cofounder & CKO Unlearni | Te ayudo a usar la IA para potenciar tu trabajo y tu aprendizaje #lifelonglearner",
     content: "Tuve el privilegio de supervisar a Matías durante sus prácticas en Globant y puedo afirmar con plena confianza que su desempeño fue sobresaliente. Matías se distinguió como un desarrollador front-end talentoso y dedicado, demostrando una sólida comprensión de los principios de desarrollo web y una notable habilidad para aplicarlos en proyectos prácticos. La actitud positiva de Matías, su disposición para aprender y su entusiasmo por enfrentar nuevos desafíos fueron verdaderamente inspiradores. Estoy convencido de que Matías será una valiosa incorporación para cualquier equipo de desarrollo front-end. Su pasión por la tecnología y su compromiso con la excelencia lo destacan como un profesional de primera categoría. Recomiendo a Matías sin reservas para cualquier oportunidad en el campo del desarrollo front-end.",

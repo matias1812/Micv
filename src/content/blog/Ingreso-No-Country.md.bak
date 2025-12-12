@@ -2,7 +2,7 @@
 draft: false
 title: "Ingreso a No Country"
 image: {
-    src: "https://res.cloudinary.com/dbaxe3y5n/image/fetch/f_auto,q_auto,fl_lossy/https%3A%2F%2Fmedia.licdn.com%2Fdms%2Fimage%2Fv2%2FD4D0BAQHWt4Q4_9GJXg%2Fcompany-logo_200_200%2Fcompany-logo_200_200%2F0%2F1733860811310%3Fe%3D1762992000%26v%3Dbeta%26t%3DGkc9f1Kh4Iqvwj1GJzIf6jf7dAje6VuAsoZBoLDpw2A",
+    src: "https://media.licdn.com/dms/image/v2/D4D0BAQHWt4Q4_9GJXg/company-logo_200_200/company-logo_200_200/0/1733860811310?e=1762992000&v=beta&t=Gkc9f1Kh4Iqvwj1GJzIf6jf7dAje6VuAsoZBoLDpw2A",
     alt: "frontend master"
 }
 href: "https://github.com/No-Country/c13-44-front-js-supabase"
